@@ -1,0 +1,158 @@
+.catalog_items{
+    display: flex;
+    list-style: none; 
+		overflow-x:hidden;    
+}
+
+.catalog_item{
+    width: 250px;
+    flex:none;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    box-shadow: 0px 0px 20px -10px #6e94a0
+}
+
+.catalog_item:not(:last-child){
+    margin-right:40px;
+}
+
+.catalog_item_img{
+    margin: 20px;
+    height: 230px;
+}
+
+.catalog_caption{
+    background-color: #f5f4f6;
+    width:180px;
+    padding: 0 25px;
+
+
+    position: relative;
+}
+
+.catalog_caption_name{
+	text-transform: uppercase;
+    font-size:32px;
+    color:#082518;
+    max-height:35px ;
+    overflow: hidden;
+    margin-top: 20px;
+}
+.catalog_caption_collection{
+	font-size:16px;
+	color:#737574;
+
+}
+
+.catalog_caption_subname{
+    font-size:18px;
+    color:#a6a3b1;
+    margin-bottom: 30px;
+
+    max-height: 20px;
+    overflow: hidden;
+
+}
+.catalog_caption_price{
+    color:#000000;
+    font-size: 20px;
+    margin: 15px;
+}
+
+.catalog_caption_btn{
+    position: absolute;
+    bottom: 10px;
+    right:10px;
+
+    width:30px;
+    height: 30px;
+    border-radius: 50%;
+
+    font-size: 24px;
+    border:none;
+    outline: none;
+    cursor: pointer;
+
+    color:#030303;
+    background-color: #fff;
+
+    box-shadow: 0px 13px 22px -1px gray;
+}
+
+.catalog_caption:hover{
+    background-color: #aaaaaa;
+}
+
+.catalog_caption:hover .catalog_caption_name,
+.catalog_caption:hover .catalog_caption_price{
+    color:#fff;
+}
+
+.catalog_caption:hover .catalog_caption_btn{
+    background-color: #7c7c86;
+    box-shadow: none;
+    color:#fff;
+}
+
+
+
+.catalog_item_img img{
+    
+    height: 240px;
+}
+
+.total_price{
+    margin: 10px;
+}
+
+.loader {
+  color:grey;
+  font-family:sans-serif;
+  height:5vh;
+  left:50%;
+  overflow-x:hidden;
+  padding-top:7vh;
+  position:absolute;
+  text-align:center;
+  top:50%;
+  transform:translate(-50%,-50%);
+  width:50vw;
+}
+
+	.loader:before {
+    animation:left-to-right 3s alternate infinite linear;
+    background-image:linear-gradient(to right, transparent, rgb(54, 50, 50), transparent);
+     bottom:0;
+    content:"";
+    height:5vh;
+    left:0;
+    overflow:hidden;
+    position:absolute;
+    right:0;
+    top:0;
+}
+ .loader:after {
+    background-image:(   90deg,white,white 1vw,transparent 1vw,transparent 10vw);
+   
+    
+    content:"";
+    height:5vh;
+    left:0;
+    overflow:hidden;
+    position:absolute;
+    right:0;
+    top:0;
+}
+
+
+@keyframes left-to-right {
+  0% {
+    transform:translateX(-100%);
+  }
+  100% {
+    transform:translateX(100%);
+  }
+}
